@@ -1,0 +1,11 @@
+{
+  "name": "sdr-ecommerce",
+  "version": "1.0.0",
+  "description": "This App is made by Soubhagya for learning purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soubhagya Darshan Rout",
+  "license": "ISC"
+}
