@@ -2,15 +2,20 @@ import React, { useReducer } from 'react'
 
 function Practice() {
     let initial = 10
-    let [state,dispatch] = useReducer(reducer,initial);
     function reducer(state,action){
-        // console.log(action);
-        return state+1;
+        if(action.type == "INC"){
+            return state+1;
+        }
+        else{
+            return state;
+        }
     }
-    reducer();
+    let [state,dispatch] = useReducer(reducer,initial);
   return (
     <div>
-      
+      <h1>This is Practice</h1>
+      <button onClick={()=>{dispatch({type:"INC"})}}>SDR Button</button>
+      <h1>{state}</h1>
     </div>
   )
 }
