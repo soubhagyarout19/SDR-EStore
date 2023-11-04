@@ -1,0 +1,1 @@
+export const BannerImage = "https://www.mattsenkumar.com/wp-content/uploads/2020/05/MK_Insights_12-05-2020.jpg";

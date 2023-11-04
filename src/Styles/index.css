@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.nav-main{
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 2rem;
+}
+.banner-main{
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    margin: 3rem 5rem 0rem 5rem;
+}
+.banner-image{
+    height: 300px;
+}
+.banner-right-side{
+    width: 800px;
+}
