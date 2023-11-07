@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { MainContext } from "../../index"
 const Card = ({data}) =>{
     let x = useContext(MainContext);
-    console.log(data);
     return(
         <div className="card-main">
         <img src={data.thumbnail} alt="Product image"></img>

@@ -1,24 +1,38 @@
 import Banner from "../Common/Banner";
 import Header from "../Common/Header";
-import Card from "../Common/Card";
 import { useContext } from "react";
 import { MainContext } from "../../index"
+import Home from "./Home";
+import About from "./About";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 
 const App = () =>{
     let x = useContext(MainContext);
-    console.log(x);
     return(
         <>
             {/* <h1>Jai Shree Ram</h1> */}
             <Header/>
-            <Banner content="Welcome to Home"/>
-            <div className="card-render">
-                {x.loading == true ? <h1>Wait...</h1> : x.data.map((element)=>{
-                    return <Card key={element.id} data={element}/>
-                })}
-            </div>
+            <Home/>
+            <About/>
         </>
     )
 }
+
+export let myRoute = createBrowserRouter([
+    {
+        path:"/",
+        element:<App/>,
+        children:[
+            {
+                path:"/",
+                element:<Home/>
+            },
+            {
+                path:"/about",
+                element:<About/>
+            }
+        ]
+    }
+])
 
 export default App;
