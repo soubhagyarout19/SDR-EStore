@@ -6,13 +6,15 @@ import App from './src/Components/App';
 export let MainContext = createContext();
 
 const Index = ()=>{
-    const [globalArr, setGlobalArr] = useState();
+    let initialValue = {data:[],loading:"false"}
+    const [globalArr, setGlobalArr] = useState(initialValue);
     useEffect(()=>{
         async function fetchApiXYZ(){
             try{
+                setGlobalArr({data:[],loading:"true"});
                 let data = await fetch("https://dummyjson.com/products");
                 let myData = await data.json();
-                setGlobalArr(myData.products);
+                setGlobalArr({data:myData.products,loading:"false"});
             }
             catch(error){
                 console.log("Unable to Fetch" + error);
@@ -20,11 +22,10 @@ const Index = ()=>{
         }
         fetchApiXYZ();
     },[])
-    console.log(globalArr);
     return(
         <>
             {
-                globalArr?.length == 0 ? <h1>Loading...</h1> : <MainContext.Provider value={globalArr}>
+                <MainContext.Provider value={...globalArr}>
                 <App/>
                 </MainContext.Provider>
             }
