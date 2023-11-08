@@ -5,7 +5,7 @@ import { MainContext } from "../../index"
 import Home from "./Home";
 import About from "./About";
 import { Outlet, createBrowserRouter } from "react-router-dom";
-
+import AllProduct from "./AllProduct";
 const App = () =>{
     let x = useContext(MainContext);
     return(
@@ -14,6 +14,7 @@ const App = () =>{
             <Header/>
             <Home/>
             <About/>
+            <AllProduct/>
         </>
     )
 }

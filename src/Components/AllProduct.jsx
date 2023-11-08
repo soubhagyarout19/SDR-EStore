@@ -1,20 +1,25 @@
 import { useContext } from "react";
 import { MainContext } from "../..";
-import Banner from "../Common/Banner";
 import Card from "../Common/Card";
 
-const Home = () =>{
+const AllProduct = () =>{
     let x = useContext(MainContext);
     return(
         <>
-            <Banner content="Welcome to Home"/>
+        <hr></hr>
+        <h1>This is AllProduct page</h1>
+            <div className="all-product-main">
+            <div className="all-product-left">
+                <input type="text"></input>
+            </div>
             <div className="card-render">
                 {x.loading == true ? <h1>Wait...</h1> : x.data.map((element)=>{
                     return <Card key={element.id} data={element}/>
-                }).slice(0,3)}
+                })}
+            </div>
             </div>
         </>
     )
 }
 
-export default Home;
+export default AllProduct;

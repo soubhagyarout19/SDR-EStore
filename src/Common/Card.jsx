@@ -7,8 +7,8 @@ const Card = ({data}) =>{
         <img src={data.thumbnail} alt="Product image"></img>
         <p className="card-name">{data.title}</p>
         <p>{data.brand}</p>
-        <p>{data.price}</p>
-        <p>{data.description}</p>
+        <p>${data.price}/-</p>
+        {/* <p className="card-desc">{data.description.substring(0,80)}</p> */}
         </div>
     )
 }
