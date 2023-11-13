@@ -4,6 +4,7 @@ import Card from "../Common/Card";
 
 const AllProduct = () =>{
     let x = useContext(MainContext);
+    console.log(x.data);
     return(
         <>
         <hr></hr>
