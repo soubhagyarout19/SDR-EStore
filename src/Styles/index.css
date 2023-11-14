@@ -77,3 +77,29 @@ body{
     font-size: 12px;
     color: gray;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.custom-margin{
+    margin: 3rem 5rem 0rem 5rem;
+}
+.single-product-main{
+    display: flex;
+    margin: 3rem 5rem 0rem 5rem;
+}
+.single-product-left{
+    display: flex;
+    gap: 5rem;
+}
+.single-product-left > img{
+    height: 300px;
+}
+.single-product-left-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.single-product-left-left > img{
+    height: 110px;
+}

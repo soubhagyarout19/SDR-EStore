@@ -8,6 +8,7 @@ import { Outlet, Route, Routes, createBrowserRouter } from "react-router-dom";
 import AllProduct from "./AllProduct";
 import Contact from "./Contact";
 import Cart from "./Cart";
+import SingleProduct from "./SingleProduct";
 
 const App = () =>{
     let x = useContext(MainContext);
@@ -48,6 +49,10 @@ export let myRoute = createBrowserRouter([
             {
                 path:"/cart",
                 element:<Cart/>
+            },
+            {
+                path:"/singleproduct/:id",
+                element:<SingleProduct/>
             }
         ]
     }
