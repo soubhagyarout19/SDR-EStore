@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { MainContext } from "../../index"
+import { MainContext } from "../Context/ProductContext";
+
 const Card = ({data}) =>{
     let x = useContext(MainContext);
     return(

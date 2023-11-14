@@ -1,31 +1,33 @@
-import { useState,useEffect, createContext } from "react";
-import App from "../Components/App";
+import { useState,createContext,useEffect } from "react";
 
-export let SDRContext = createContext([]);
+export let MainContext = createContext();
 
-const ProductComtext = () =>{
-    let [myApi, setMyApi] = useState();
-    let [isLoading, setIsLoading] = useState(true);    
+const ProductContext = ({children})=>{
+    let initialValue = {data:[],loading:"false"}
+    const [globalArr, setGlobalArr] = useState(initialValue);
     useEffect(()=>{
         async function fetchApiXYZ(){
-            let data = await fetch("https://dummyjson.com/products");
-            let myData = await data.json();
-            setMyApi(myData);
-            setIsLoading(false);
+            try{
+                setGlobalArr({data:[],loading:"true"});
+                let data = await fetch("https://dummyjson.com/products");
+                let myData = await data.json();
+                setGlobalArr({data:myData.products,loading:"false"});
+            }
+            catch(error){
+                console.log("Unable to Fetch" + error);
+            }
         }
         fetchApiXYZ();
     },[])
-
-    if(isLoading){
-        return null;
-    }
-    else{
-        return(
-            <SDRContext.Provider value={myApi}>
-                {children}
-            </SDRContext.Provider>
-        )
-    }
+    return(
+        <>
+            {
+                <MainContext.Provider value={...globalArr}>
+                    {children}
+                </MainContext.Provider>
+            }
+        </>
+    )
 }
 
-export default ProductComtext;
+export default ProductContext;

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainContext } from "../..";
+import { MainContext } from "../Context/ProductContext";
 import Card from "../Common/Card";
 
 const AllProduct = () =>{
