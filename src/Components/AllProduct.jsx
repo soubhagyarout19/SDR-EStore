@@ -12,7 +12,7 @@ const AllProduct = () =>{
         <h1>This is AllProduct page</h1>
             <div className="all-product-main">
             <div className="all-product-left">
-                <input type="text"></input>
+                {/* <input type="text"></input> */}
             </div>
             <div className="card-render">
                 {x.loading == true ? <h1>Wait...</h1> : x.data.map((element)=>{

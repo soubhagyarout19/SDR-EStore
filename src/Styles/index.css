@@ -106,3 +106,59 @@ a{
 .single-product-left-left > img{
     height: 110px;
 }
+
+@media only screen and (max-width: 768px) {
+    
+    
+    .nav-main {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .banner-main {
+        margin: 0.5rem;
+        gap: 0.5rem;
+        display: block;
+    }
+
+    .banner-right-side > button {
+        margin-top: 0.5rem;
+    }
+
+    .banner-right-side > p {
+        width: 700px;
+    }
+
+    .card-render {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .card-main {
+        height: auto;
+    }
+
+    .card-main > img {
+        height: auto;
+    }
+
+    .custom-margin {
+        margin: 0.5rem;
+    }
+
+    .single-product-main {
+        gap: 0.5rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .single-product-left > img {
+        height: auto;
+    }
+
+    .single-product-left-left > img {
+        height: auto;
+    }
+}

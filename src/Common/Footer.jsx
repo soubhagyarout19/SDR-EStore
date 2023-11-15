@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-logo">
-          <h1>Your Logo</h1>
+          <h1>SDR Estore</h1>
         </div>
         <div className="footer-links">
           <ul>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2023 Your Company. All rights reserved.</p>
+        <p>&copy; 2023 SDR PVT LTD. All rights reserved.</p>
       </div>
     </footer>
   );
