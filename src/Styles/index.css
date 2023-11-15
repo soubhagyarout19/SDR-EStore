@@ -86,11 +86,14 @@ a{
 }
 .single-product-main{
     display: flex;
-    margin: 3rem 5rem 0rem 5rem;
+    gap: 2.5rem;
+    margin: 0rem 5rem 0rem 5rem;
+    background-color: white;
+    padding: 3rem 5rem 100rem 5rem;
 }
 .single-product-left{
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
 }
 .single-product-left > img{
     height: 300px;
@@ -98,7 +101,7 @@ a{
 .single-product-left-left{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.1rem;
 }
 .single-product-left-left > img{
     height: 110px;

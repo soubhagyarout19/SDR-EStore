@@ -9,6 +9,7 @@ import AllProduct from "./AllProduct";
 import Contact from "./Contact";
 import Cart from "./Cart";
 import SingleProduct from "./SingleProduct";
+import Footer from "../Common/Footer";
 
 const App = () =>{
     let x = useContext(MainContext);
@@ -17,10 +18,8 @@ const App = () =>{
         <>
             {/* <h1>Jai Shree Ram</h1> */}
             <Header/>
-            {/* <Home/>
-            <About/>
-            <AllProduct/> */}
             <Outlet/>
+            <Footer/>
         </>
     )
 }

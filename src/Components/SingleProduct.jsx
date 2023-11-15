@@ -18,7 +18,6 @@ const SingleProduct = () => {
   console.log(singProd.data.images);
   return (
     <div>
-      <h1>This is Single Product...</h1>
       {singProd.flag && (
         <div className="single-product-main">
           <div className="single-product-left">
