@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Store from "../Redux/Store";
 
 const Header = () =>{
+    let itemCount = useSelector(Store => Store.cart.items);
+    console.log(itemCount);
     return(
         <>
             <div className="nav-main">
@@ -9,7 +13,7 @@ const Header = () =>{
                 <Link to="/about"><p>About</p></Link>
                 <Link to="/allproducts"><p>All Product</p></Link>
                 <Link to="/contact"><p>Contact</p></Link>
-                <Link to="cart"><p>Cart</p></Link>
+                <Link to="cart"><p>Cart-{itemCount.length}</p></Link>
             </div>
         </>
     )

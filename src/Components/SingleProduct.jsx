@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addItem } from "../Redux/cartSlice";
 
 const SingleProduct = () => {
   let SingleProductData = ([singProd, setSingleProd] = useState({
@@ -16,14 +18,19 @@ const SingleProduct = () => {
     xyz();
   }, []);
   console.log(singProd.data.images);
+
+  const dispatch = useDispatch();
+  function addItemHandler(arg){
+    dispatch(addItem(arg))
+  }
   return (
     <div>
       {singProd.flag && (
         <div className="single-product-main">
           <div className="single-product-left">
             <div className="single-product-left-left">
-              {singProd.data.images.map((element) => {
-                return <img src={element}></img>;
+              {singProd.data.images.map((element,index) => {
+                return <img key={index} src={element}></img>;
               })}
             </div>
             <img src={singProd.data.thumbnail} alt="xyz"></img>
@@ -32,6 +39,9 @@ const SingleProduct = () => {
             <h1>{singProd.data.title}</h1>
             <h2>${singProd.data.price}/-</h2>
             <p>{singProd.data.description}</p>
+            <button>-</button>
+            {}
+            <button onClick={()=>addItemHandler(singProd)}>+</button>
           </div>
         </div>
       )}

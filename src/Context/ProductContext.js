@@ -21,11 +21,9 @@ const ProductContext = ({children})=>{
     },[])
     return(
         <>
-            {
                 <MainContext.Provider value={...globalArr}>
                     {children}
                 </MainContext.Provider>
-            }
         </>
     )
 }
